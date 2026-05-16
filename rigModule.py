@@ -52,15 +52,42 @@ class windowGui():
     def mk_controller_layout(self):
         # title 
         # shape drop down
+            # for file in RigConShapes
+            # make dropdon button
         # size drop down
         # color drop down
         pass
 
-class rigModular():
+class rigHandlesModular():
     def __init__(self):
         pass
 
-class wholeSkeletonModular():
+    def mk_fk(self):
+        sel = cmds.ls(sl=True)
+        for jnt in sel:
+            jnt_name = jnt.upper()
+            if jnt_name.endswith('_JNT') == False:
+                jnt = cmds.rename(jnt, jnt + '_JNT')
+            con_grp = cmds.group(n=jnt.replace('_JNT', '_CON_GRP'), em=True)
+            # REPLACE WITH CONTROLS 
+            con = cmds.circle(n=jnt.replace('_JNT', '_CON'))
+            cmds.parent(con, con_grp)
+            cmds.delete(cmds.parentConstraint(jnt, con_grp, mo=False))
+            cmds.parentConstraint(con, jnt, mo=True)
+        # ADD GROUP CHAIN AT END OF LOOP
+        # if prev con grp exists, parent under con
+        pass
+
+    def mk_ik(self):
+        pass
+
+    def mk_spline(self):
+        pass
+
+    def mk_ribbon(self):
+        pass
+
+class fullSkeletonModular():
     def __init__(self):
         pass
 
