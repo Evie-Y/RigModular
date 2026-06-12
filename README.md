@@ -23,7 +23,7 @@ UI
 Controller Generator
 - pulls unique controller from folder
 - edit color, size, shape
-- used for the rest of the rif modular
+- used for the rest of the rig modular
 Rig Handle Generator
 - able to make ik, fk, ikfk, spline, ribbons
 - ability to customize and put multiple handles into a BIND skeleton, ie: ik/fk
@@ -76,6 +76,7 @@ Rig Modular
   ~~-editable shapes~~
   ~~-editable colors~~
   ~~-editable sizes~~
+  
 -Switches/Handles
   -ik
   -fk
@@ -83,10 +84,12 @@ Rig Modular
   -ribbon
   -ikfk switch
   -customizable switch
+  
 -Body Part
   -legs, arms, spine, tail, tongue, eye, mouth, brow, ect...
   -size
   -color
+  
 -Skeleton Modular
   -spits out human/quad skeleton
   -editable skeleton size?
